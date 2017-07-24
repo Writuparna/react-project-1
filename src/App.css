@@ -18,6 +18,14 @@
   font-size: large;
 }
 
+.footerSec{
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+.bodySection{
+  min-height: 82vh;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

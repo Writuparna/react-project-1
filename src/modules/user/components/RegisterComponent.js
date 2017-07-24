@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {DefaultStructureComponent} from './../../../utils/DefaultStructureComponent'; 
+import {TextInput} from './../../../utils/FormComponent'; 
 
 export class RegisterComponent extends Component {
   constructor(props) {
@@ -27,36 +28,14 @@ export class RegisterComponent extends Component {
     return (
       <DefaultStructureComponent>
         <form>
+          <TextInput inputType="text" name="firstname" labelName="First name"/>
+          <TextInput inputType="text" name="lastname" labelName="Last name"/>
+          <TextInput inputType="email" name="email" labelName="Email id"/>
+          <TextInput inputType="tel" name="phone" labelName="Phone number"/>
+          <TextInput inputType="password" name="password" labelName="Password"/>
+          <TextInput inputType="retypepassword" name="retypepassword" labelName="Confirm password"/>
           <label>
-            First name:
-            <input type="text" name="firstname" value={this.state.firstname} onChange={this.handleChange.bind(this)} />
-          </label><br/>
-          <label>
-            Last name:
-            <input type="text" name="lastname" value={this.state.lastname} onChange={this.handleChange.bind(this)}/>
-          </label><br/>
-          <label>
-            Email id:
-            <input type="email" name="email" value={this.state.email} onChange={this.handleChange.bind(this)}/>
-          </label><br/>
-          <label>
-            Phone number:
-            <input type="tel" name="phone" value={this.state.phone} onChange={this.handleChange.bind(this)}/>
-          </label><br/>
-          <label>
-            Username:
-            <input type="text" name="username" value={this.state.username} onChange={this.handleChange.bind(this)}/>
-          </label><br/>
-          <label>
-            Password:
-            <input type="password" name="password" value={this.state.password} onChange={this.handleChange.bind(this)}/>
-          </label><br/>
-          <label>
-            Confirm password:
-            <input type="password" name="retypepassword"  value={this.state.retypepassword} onChange={this.handleChange.bind(this)}/>
-          </label><br/>
-          <label>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" className="btn btn-primary" />
           </label>
         </form>
       </DefaultStructureComponent>
