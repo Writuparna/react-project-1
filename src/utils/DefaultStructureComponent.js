@@ -6,11 +6,22 @@ import {
 export class DefaultStructureComponent extends Component {
 	render(){
 		return(
-			<div>
+			<div className="mainSec">
 				<HeaderComponent/>
-					<div className="container bodySection">
+					<div className="container-fluid bodySection">
             <div className="row">
-              {this.props.children}
+              <div>
+                <LeftSidebarComponent />
+                <div className="col-sm-10">
+                  <div className="row">
+                    <div className="col-sm-12">
+                      <div className="row">
+                        {this.props.children}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 				<FooterComponent />
@@ -22,11 +33,9 @@ export class DefaultStructureComponent extends Component {
 export class HeaderComponent extends Component {
   render(){
     return(
-      <div>
+      <div className="headerSec">
       	<MenuComponent />
-        <div className="container-fluid">
-          {this.props.children}
-        </div>
+        {this.props.children}
       </div>
     )
   }
@@ -64,7 +73,7 @@ export class SearchComponent extends Component {
   render(){
     return(
       <div>
-        <form className="navbar-form navbar-left">
+        <form className="navbar-form navbar-right">
           <div className="input-group">
             <input type="text" className="form-control" placeholder="Search" />
             <div className="input-group-btn">
@@ -78,6 +87,38 @@ export class SearchComponent extends Component {
     )
   }
 }
+
+
+export class LeftSidebarComponent extends Component {
+  render(){
+    return(
+      <div className="col-sm-2">
+        <ul className="list-group">
+          <li className="list-group-item">Lorem ipsum</li>
+          <li className="list-group-item">Lorem ipsum</li>
+          <li className="list-group-item">Lorem ipsum</li>
+          <li className="list-group-item">Lorem ipsum</li>
+        </ul>
+      </div>
+    )
+  }
+}
+
+export class RightSidebarComponent extends Component {
+  render(){
+    return(
+      <div className="col-sm-3">        
+        <ul className="list-group">
+          <li className="list-group-item">Lorem ipsum</li>
+          <li className="list-group-item">Lorem ipsum</li>
+          <li className="list-group-item">Lorem ipsum</li>
+          <li className="list-group-item">Lorem ipsum</li>
+        </ul>
+      </div>
+    )
+  }
+}
+
 
 export class FooterComponent extends Component {
   render(){

@@ -17,7 +17,10 @@
 .App-intro {
   font-size: large;
 }
-
+p{font-size: 14px; color: #333;}
+p i{font-size: 14px; color: #999;}
+ul{margin: 0; padding: 0; list-style: none;}
+.mainSec .navbar{margin-bottom: 0; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; -ms-border-radius: 0; -o-border-radius: 0;}
 .footerSec{
   padding: 10px 0;
   border-top: 1px solid #ddd;
@@ -25,7 +28,22 @@
 }
 .bodySection{
   min-height: 82vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
+.blogPost h2,.blogPost h3{margin: 0;}
+.blogPost h2{font-size: 18px; color: #222;}
+.blogPost h3{font-size: 14px; color: #999;}
+
+
+
+
+
+
+
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
