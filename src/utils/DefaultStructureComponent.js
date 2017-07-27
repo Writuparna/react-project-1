@@ -10,17 +10,11 @@ export class DefaultStructureComponent extends Component {
 				<HeaderComponent/>
 					<div className="container-fluid bodySection">
             <div className="row">
-              <div>
+              <div className="col-sm-2">
                 <LeftSidebarComponent />
-                <div className="col-sm-10">
-                  <div className="row">
-                    <div className="col-sm-12">
-                      <div className="row">
-                        {this.props.children}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div className="col-sm-10">
+                {this.props.children}
               </div>
             </div>
           </div>
@@ -92,14 +86,12 @@ export class SearchComponent extends Component {
 export class LeftSidebarComponent extends Component {
   render(){
     return(
-      <div className="col-sm-2">
         <ul className="list-group">
           <li className="list-group-item">Lorem ipsum</li>
           <li className="list-group-item">Lorem ipsum</li>
           <li className="list-group-item">Lorem ipsum</li>
           <li className="list-group-item">Lorem ipsum</li>
         </ul>
-      </div>
     )
   }
 }
@@ -119,6 +111,16 @@ export class RightSidebarComponent extends Component {
   }
 }
 
+export class AskQuestion extends Component{
+  render(){
+    return(
+      <div className="well askQus">
+        <h3>Ask your question</h3>
+        <input type="text" className="form-control" />
+      </div>
+    )
+  }
+}
 
 export class FooterComponent extends Component {
   render(){
