@@ -4,6 +4,9 @@ import {RightSidebarComponent} from './../../../utils/DefaultStructureComponent'
 import {AskQuestion} from './../../../utils/DefaultStructureComponent';
 import {PostComponent} from './../../../utils/PostComponent';
 import {UserprofileComponent} from './../../../utils/PostComponent';
+import {CommentComponent} from './../../../utils/PostComponent';
+import {QsansComponent} from './../../../utils/PostComponent';
+import {TopicComponent} from './../../../utils/PostComponent';
 
 
 export class HomeComponent extends Component {
@@ -16,11 +19,19 @@ export class HomeComponent extends Component {
 	                <div className="row">
 				        <div className="col-sm-9">
                 			<AskQuestion/>
-							<PostComponent topic="Music" question="This is 1st question"  answer="Answer is upcoming">
+							<PostComponent>
+								<TopicComponent topic="Music"/>								
+								<QsansComponent qus="This is 1st question" ans="Answer is upcoming"/>
 								<UserprofileComponent username="Saswata" usertag="Lorem ipsum" />
-							</PostComponent>	
-							<PostComponent topic="Photography" question="This is 1st question"  answer="Answer is upcoming">
+								<CommentComponent name="Someone user"/>	
+							</PostComponent>
+
+
+
+							<PostComponent topic="Photography">	
+								<QsansComponent qus="This is 1st question" ans="Answer is upcoming"/>
 								<UserprofileComponent username="Writuparna" usertag="Lorem ipsum" />
+								<CommentComponent name="Someone user"/>	
 							</PostComponent>						
 				        </div>
 	        			<RightSidebarComponent />

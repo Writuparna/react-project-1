@@ -87,10 +87,12 @@ export class LeftSidebarComponent extends Component {
   render(){
     return(
         <ul className="list-group">
-          <li className="list-group-item">Lorem ipsum</li>
-          <li className="list-group-item">Lorem ipsum</li>
-          <li className="list-group-item">Lorem ipsum</li>
-          <li className="list-group-item">Lorem ipsum</li>
+          <li className="list-group-item">
+            <Link to="/topstories">Top stories</Link>
+          </li>
+          <li className="list-group-item">
+            <Link to="/newQs">New questions</Link>
+          </li>
         </ul>
     )
   }

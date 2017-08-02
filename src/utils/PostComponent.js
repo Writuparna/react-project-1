@@ -4,17 +4,7 @@ export class PostComponent extends Component {
 	render(){
 		return(
 			<article className="panel panel-default blogPost">
-				<h3 className="panel-heading">Topic: {this.props.topic}</h3>
-				<div className="panel-body">
-					<h2>{this.props.question}</h2>
-					<p><i>{this.props.user}</i></p>
-
-						{this.props.children}					
-					<div className="ansSec">
-						{this.props.answer}
-					</div>	
-					<CommentComponent name="Someone user"/>	
-				</div>		
+				{this.props.children}							
 			</article>         
 		)
 	}
@@ -24,7 +14,7 @@ export class PostComponent extends Component {
 export class UserprofileComponent extends Component {
 	render(){
 		return(
-			<div>
+			<div className="panel-body">
 				<h3 className="userName">{this.props.username}</h3>
 				<p className="userTagline">{this.props.usertag}</p>
 				<p className="userOccupation">{this.props.useroccupation}</p>
@@ -43,6 +33,27 @@ export class CommentComponent extends Component{
 				<label>{this.props.name}</label>
 				<input type="text" className="form-control" placeholder="Comment here"/>
 			</div>
+		)
+	}
+}
+
+
+export class QsansComponent extends Component{
+	render(){
+		return(
+			<div className="panel-body">
+				<h2>{this.props.qus}</h2>			
+				<div className="ansSec">
+					{this.props.ans}
+				</div>	
+			</div>	
+		)
+	}
+}
+export class TopicComponent extends Component{
+	render(){
+		return(
+			<h3 className="panel-heading">Topic: {this.props.topic}</h3>
 		)
 	}
 }
