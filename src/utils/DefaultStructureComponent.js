@@ -90,7 +90,6 @@ export class MenuComponent extends Component {
               <li><Link to="/about">About</Link></li>
               <li><Link to="/login">Login</Link></li>
               <li><Link to="/register">Register</Link></li>
-              <li><Link to="/other">Other</Link></li>
             </ul>
             <SearchComponent />  
             <button className="btn btn-primary" data-toggle="modal" data-target="#myModal">Ask questions</button>
