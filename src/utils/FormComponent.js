@@ -5,7 +5,7 @@ export class TextInput extends Component {
 		return(
 			<div className="form-group">
 				<label htmlFor={this.props.labelName}>{this.props.labelName} :</label>
-				<input type={this.props.inputType} name={this.props.name} className="form-control" placeholder={this.props.placeHolder}/>
+				<input type={this.props.inputType} name={this.props.name} className="form-control" placeholder={this.props.placeHolder} value={this.props.value} onChange={this.props.onChange}/>
 			</div>         
 		)
 	}

@@ -90,6 +90,7 @@ export class MenuComponent extends Component {
               <li><Link to="/about">About</Link></li>
               <li><Link to="/login">Login</Link></li>
               <li><Link to="/register">Register</Link></li>
+              <li><Link to="/other">Other</Link></li>
             </ul>
             <SearchComponent />  
             <button className="btn btn-primary" data-toggle="modal" data-target="#myModal">Ask questions</button>
@@ -105,7 +106,7 @@ export class MenuComponent extends Component {
             >
               Launch demo modal
             </Button>
-            <Modal show={this.state.showModal} onHide={this.close.bind(this   )}>
+            <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
               <Modal.Header closeButton>
                 <Modal.Title>Modal heading</Modal.Title>
               </Modal.Header>
