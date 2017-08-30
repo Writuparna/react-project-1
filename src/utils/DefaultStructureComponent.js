@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 import {
    AskButton
-    } from '../modules/user/components/AskComponent';
+    } from './AskComponent';
 
 export class DefaultStructureComponent extends Component {
 	render(){

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {DefaultStructureComponent} from './../../../utils/DefaultStructureComponent'; 
 import {RightSidebarComponent} from './../../../utils/DefaultStructureComponent'; 
 import {AskQuestion} from './../../../utils/DefaultStructureComponent';
+import {PopupaskComponent} from './../../../utils/AskComponent';
 import {
 		PostComponent,
 		UserprofileComponent,
@@ -24,7 +25,7 @@ export class HomeComponent extends Component {
 	              	<div className="col-sm-12">
 		                <div className="row">
 					        <div className="col-sm-9">
-	                			<AskQuestion/>
+	                			<PopupaskComponent/>
 								<PostComponent>
 									<TopicComponent topic="Music"/>								
 									<QsansComponent qus="This is 1st question" ans="Answer is upcoming"/>

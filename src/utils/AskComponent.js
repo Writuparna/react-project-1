@@ -6,15 +6,14 @@ import {
   Modal,
   OverlayTrigger,
 } from 'react-bootstrap'; 
-import {DefaultStructureComponent} from './../../../utils/DefaultStructureComponent'; 
-import {TextInput} from './../../../utils/FormComponent'; 
+import {TextInput} from './FormComponent'; 
 import {
     PostComponent,
     UserprofileComponent,
     CommentComponent,
     QsansComponent,
     TopicComponent
-    } from './../../../utils/PostComponent';
+    } from './PostComponent';
 
 
 export class AskButton extends Component{  
