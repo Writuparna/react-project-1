@@ -39,7 +39,7 @@ export class RegisterComponent extends Component{
     return(
       <DefaultStructureComponent>
         <form onSubmit={this.handleSubmit}>
-        <TextInput inputType="text" name="firstname" labelName="First name" value={this.state.firstname} onChange={this.handleChange}/>
+         <TextInput inputType="text" name="firstname" labelName="First name" value={this.state.firstname} onChange={this.handleChange}/>
           <TextInput inputType="text" name="lastname" labelName="Last name" value={this.state.lastname} onChange={this.handleChange}/>
           <TextInput inputType="email" name="email" labelName="Email id" value={this.state.email} onChange={this.handleChange}/>
           <TextInput inputType="tel" name="phone" labelName="Phone number" value={this.state.phone} onChange={this.handleChange}/>

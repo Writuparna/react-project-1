@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 import {
-  Popover,
-  Tooltip,
-  Button,
-  Modal,
-  OverlayTrigger,
-} from 'react-bootstrap'; 
-import {
   Link
 } from 'react-router-dom';
+import {
+   AskButton
+    } from '../modules/user/components/AskComponent';
 
 export class DefaultStructureComponent extends Component {
 	render(){
@@ -44,35 +40,7 @@ export class HeaderComponent extends Component {
 
 export class MenuComponent extends Component {  
   
-  constructor(props){
-    super(props);
-
-    this.state = {
-      showModal: false   
-    }
-  }
-
-  close() {
-    this.setState({ showModal: false });
-  }
-
-  open() {
-    this.setState({
-      showModal: true
-    });
-  }
-
   render(){
-    const popover = (
-      <Popover id="modal-popover" title="popover">
-        very popover. such engagement
-      </Popover>
-    );
-    const tooltip = (
-      <Tooltip id="modal-tooltip">
-        wow.
-      </Tooltip>
-    );
     return(
       <nav className="navbar navbar-default navbar-inverse">
         <div className="container-fluid">
@@ -91,40 +59,10 @@ export class MenuComponent extends Component {
               <li><Link to="/login">Login</Link></li>
               <li><Link to="/register">Register</Link></li>
             </ul>
-            <SearchComponent />  
-            <button className="btn btn-primary" data-toggle="modal" data-target="#myModal">Ask questions</button>
+            <SearchComponent />
+            <AskButton />  
           </div>
-
-          //modal start
-          <div>
-            <p>Click to get the full Modal experience!</p>
-            <Button
-              bsStyle="primary"
-              bsSize="large"
-              onClick={this.open.bind(this)}
-            >
-              Launch demo modal
-            </Button>
-            <Modal show={this.state.showModal} onHide={this.close.bind(this)}>
-              <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <h4>Text in a modal</h4>
-                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-
-                <h4>Popover in a modal</h4>
-                <p>there is a <OverlayTrigger overlay={popover}><a href="#">popover</a></OverlayTrigger> here</p>
-
-                <h4>Tooltips in a modal</h4>
-                <p>there is a <OverlayTrigger overlay={tooltip}><a href="#">tooltip</a></OverlayTrigger> here</p>
-              </Modal.Body>
-              <Modal.Footer>
-                <Button onClick={this.close.bind(this)}>Close</Button>
-              </Modal.Footer>
-            </Modal>
-          </div>
-          //modal end
+          
 
 
         </div>
@@ -151,6 +89,7 @@ export class SearchComponent extends Component {
     )
   }
 }
+
 
 
 export class LeftSidebarComponent extends Component {
@@ -183,16 +122,22 @@ export class RightSidebarComponent extends Component {
   }
 }
 
-export class AskQuestion extends Component{
+export class AskQuestion extends Component{  
   render(){
     return(
       <div className="well askQus">
         <h3>Ask your question</h3>
         <input type="text" className="form-control" />
-      </div>
+      </div>     
     )
   }
 }
+
+
+
+
+
+
 
 export class FooterComponent extends Component {
   render(){
